@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economic Data - Desertification Crisis Project</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js for visualizations -->
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Economic Data</h1>
+        <p>An analysis of the economic impacts of desertification on agriculture, poverty, and regional economies.</p>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            
+        </ul>
+    </nav>
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- Economic Data Overview -->
+        <section>
+            <h2>Economic Impacts of Desertification</h2>
+            <p>Desertification leads to significant economic losses, particularly in agriculture-dependent regions, causing reduced crop yields, livestock deaths, and loss of livelihoods. Below is an economic analysis of the hardest-hit regions.</p>
+        </section>
+
+        <!-- Economic Data Table -->
+        <section>
+            <h3>Key Economic Indicators</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Region</th>
+                        <th>Agricultural Loss (Million USD)</th>
+                        <th>GDP Decline (%)</th>
+                        <th>Poverty Increase (%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sub-Saharan Africa</td>
+                        <td>5,000</td>
+                        <td>-1.8%</td>
+                        <td>+10%</td>
+                    </tr>
+                    <tr>
+                        <td>Middle East</td>
+                        <td>3,200</td>
+                        <td>-2.5%</td>
+                        <td>+8%</td>
+                    </tr>
+                    <tr>
+                        <td>South Asia</td>
+                        <td>4,100</td>
+                        <td>-2.0%</td>
+                        <td>+6%</td>
+                    </tr>
+                    <tr>
+                        <td>Latin America</td>
+                        <td>2,800</td>
+                        <td>-1.5%</td>
+                        <td>+7%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Economic Data Chart -->
+        <section>
+            <h3>Agricultural Loss by Region (2020-2023)</h3>
+            <canvas id="economicChart" width="400" height="200"></canvas>
+            <script>
+                const ctx = document.getElementById('economicChart').getContext('2d');
+                const economicChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Sub-Saharan Africa', 'Middle East', 'South Asia', 'Latin America'],
+                        datasets: [{
+                            label: 'Agricultural Loss (Million USD)',
+                            data: [5000, 3200, 4100, 2800],
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.6)',
+                                'rgba(54, 162, 235, 0.6)',
+                                'rgba(75, 192, 192, 0.6)',
+                                'rgba(153, 102, 255, 0.6)'
+                            ],
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: 'Agricultural Loss (Million USD)'
+                                }
+                            }
+                        }
+                    }
+                });
+            </script>
+        </section>
+
+        <!-- Economic Data Map (Image or Interactive Map Placeholder) -->
+        <section>
+            <h3>Global Economic Impact of Desertification</h3>
+            <p>The following map highlights the regions most economically affected by desertification, showing agricultural loss, GDP decline, and poverty increase.</p>
+            <img src="images/economic-impact-map.png" alt="Map of Global Economic Impact" class="responsive-image">
+        </section>
+
+        <!-- Sources Section -->
+        <section>
+            <h3>Data Sources</h3>
+            <ul>
+                <li>Food and Agriculture Organization (FAO) Reports</li>
+                <li>World Bank Economic Data</li>
+                <li>UNDP (United Nations Development Programme) Poverty Studies</li>
+                <li>Global Assessment Report on Disaster Risk Reduction (GAR)</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2024 Desertification Crisis Project - All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

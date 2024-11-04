@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Data - Desertification Crisis Project</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js for graphs -->
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Climate Data</h1>
+        <p>Explore the climate data and trends contributing to the increasing risk of desertification across various regions.</p>
+    </header>
+  
+    <main>
+        <section>
+            <img src="images/image of climate data.jpg " width="800">
+            <h2>Climate Data Overview</h2>
+            <p>The following data highlights key climate factors driving desertification, such as rising temperatures, prolonged droughts, and decreasing rainfall patterns.</p>
+        </section>
+
+        <!-- Climate Data Table -->
+        <section>
+            <h3>Key Climate Statistics</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Region</th>
+                        <th>Average Temperature Increase (°C)</th>
+                        <th>Annual Rainfall Decrease (%)</th>
+                        <th>Annual Drought Incidents (2020-2023)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sahara-Sahel Region</td>
+                        <td>+2.5°C</td>
+                        <td>-12%</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>Middle East</td>
+                        <td>+1.8°C</td>
+                        <td>-15%</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>Western United States</td>
+                        <td>+1.6°C</td>
+                        <td>-10%</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>Horn of Africa</td>
+                        <td>+2.2°C</td>
+                        <td>-20%</td>
+                        <td>6</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Climate Data Graph (Using Chart.js) -->
+        <section>
+            <h3>Temperature Increase Trends (2000-2023)</h3>
+            <canvas id="temperatureChart" width="400" height="200"></canvas>
+            <script>
+                const ctx = document.getElementById('temperatureChart').getContext('2d');
+                const temperatureChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['2000', '2005', '2010', '2015', '2020', '2023'],
+                        datasets: [{
+                            label: 'Sahara-Sahel Region',
+                            data: [0.5, 1.0, 1.5, 2.0, 2.3, 2.5],
+                            borderColor: 'rgba(255, 99, 132, 1)',
+                            borderWidth: 2,
+                            fill: false
+                        },
+                        {
+                            label: 'Middle East',
+                            data: [0.3, 0.7, 1.2, 1.5, 1.7, 1.8],
+                            borderColor: 'rgba(54, 162, 235, 1)',
+                            borderWidth: 2,
+                            fill: false
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: false,
+                                title: {
+                                    display: true,
+                                    text: 'Temperature Increase (°C)'
+                                }
+                            }
+                        }
+                    }
+                });
+            </script>
+        </section>
+
+        <!-- Climate Data Map (Using a Static Image) -->
+        <section>
+            <h3>Map of Desertification-Prone Regions</h3>
+            <p>The following map shows regions most affected by desertification due to climate change, highlighting Africa, the Middle East, and parts of Asia and the Americas.</p>
+            <img src="./images/Screenshot 2024-10-20 120552.png" alt="Map of Desertification-Prone Regions" class="responsive-image">
+        </section>
+
+        <!-- Sources Section -->
+        <section>
+            <h3>Data Sources</h3>
+            <ul>
+                <li>UNCCD (United Nations Convention to Combat Desertification) Reports</li>
+                <li>World Meteorological Organization (WMO) Climate Data Archives</li>
+                <li>National Aeronautics and Space Administration (NASA) Climate Monitoring Program</li>
+                <li>Global Drought Information System (GDIS)</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2024 Desertification Crisis Project - All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
